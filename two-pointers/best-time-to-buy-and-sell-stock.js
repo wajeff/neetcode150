@@ -14,7 +14,7 @@ class Solution {
               max = Math.max(profit,max)
       }
       else{
-          left = right
+          left = right;
       };
       right++
   }
