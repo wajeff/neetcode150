@@ -1,13 +1,22 @@
-const productExceptSelf = function(nums) {
-  let result = []
-  let originalNums = [...nums]
-  for(let i = 0; i < nums.length ; i++){
-    currentArray = [...nums]
-    delete currentArray[i]
-    result.push(currentArray.reduce((a,b)=>b*a,1))
-
-  }
-  return result
-
+class Solution {
+  /**
+   * @param {number[]} nums
+   * @return {number[]}
+   */
+  productExceptSelf(nums) {
+       let currentValue = 1;
+let result = [];
+for(let i = 0 ; i < nums.length ; i++){
+  result.push(currentValue);
+  currentValue *= nums[i]
+  
 }
-productExceptSelf([-1,0,1,2,3])
+currentValue = 1;
+for(let i = nums.length-1; i >-1 ; i--){
+  result[i]=(currentValue*result[i]);
+  currentValue *= nums[i]; 
+  
+};
+return(result);
+  }
+}

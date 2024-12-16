@@ -1,9 +1,0 @@
-const productExceptSelf = function(nums) {
-  let result = []
-  for(let i = 0; i < nums.length ; i++){
-    currentArray = ...nums.splice(i,1)
-    console.log(currentArray)
-  }
-
-}
-productExceptSelf([-1,0,1,2,3])
